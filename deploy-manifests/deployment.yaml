@@ -3,8 +3,12 @@ kind: Deployment
 metadata:
   name:  arogocd-kafka-subscriber
   labels:
-    name:  arogocd-kafka-subscriber
+    app.kubernetes.io/name:  arogocd-kafka-subscriber
 spec:
+  replicas: 1
+  selector:
+      matchLabels:
+        app.kubernetes.io/name: arogocd-kafka-subscriber
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -13,11 +17,12 @@ spec:
   template:
     metadata:
       labels:
-        name:  arogocd-kafka-subscriber
+        app.kubernetes.io/name:  arogocd-kafka-subscriber
     spec:
       containers:
       - image:  joydeep1985/kafka-subscriber
         name:  arogocd-kafka-subscriber
+        imagePullPolicy: Always
         resources:
           requests:
             cpu: "20m"
