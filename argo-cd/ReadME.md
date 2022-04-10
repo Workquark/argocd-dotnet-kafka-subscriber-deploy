@@ -37,3 +37,5 @@
 - For Eg - `argocd app create argocd-dotnet-kafka-subscriber-dev --repo https://github.com/Workquark/argocd-dotnet-kafka-subscriber.git --path Kafka-Subscriber/deploy-manifests --dest-server "https://kubernetes.default.svc"`
 
 ## Placeholder -
+
+    This is a place holder for argo events testing
