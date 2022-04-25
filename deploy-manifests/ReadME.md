@@ -5,3 +5,4 @@ This is test ReadMe.md for argocd triggers
 - Test 4
 - Test 6
 - Test 7
+- Test 8
